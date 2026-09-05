@@ -1178,3 +1178,137 @@ button {
         animation-iteration-count: 1 !important;
     }
 }
+
+.hero-page {
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-page h1 {
+    max-width: 58rem;
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.about-grid,
+.timeline-layout {
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.2fr);
+    gap: 5rem;
+}
+
+.about-heading {
+    margin: 0;
+    color: var(--black);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+.about-copy {
+    max-width: 44rem;
+    color: var(--gray-700);
+    font-size: 1.1rem;
+}
+
+.about-copy p {
+    margin: 0 0 1.35rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.skill-card {
+    padding: 1.75rem;
+    border-top: 0.2rem solid var(--gold);
+    background: var(--black-soft);
+}
+
+.skill-card h3 {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.45rem;
+}
+
+.skill-card ul {
+    padding: 0;
+    margin: 1.3rem 0 0;
+    list-style: none;
+}
+
+.skill-card li {
+    padding: 0.7rem 0;
+    border-bottom: 0.0625rem solid #4b4742;
+    color: #d7d2ca;
+}
+
+.skill-card li:last-child {
+    border-bottom: 0;
+}
+
+.timeline {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.timeline li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 1.25rem;
+    padding-bottom: 2.5rem;
+}
+
+.timeline li:not(:last-child)::before {
+    position: absolute;
+    top: 1.3rem;
+    left: 0.45rem;
+    width: 0.12rem;
+    height: calc(100% - 1.3rem);
+    background: var(--gray-300);
+    content: "";
+}
+
+.timeline-marker {
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.35rem;
+    border: 0.2rem solid var(--cream);
+    border-radius: 50%;
+    background: var(--crimson);
+}
+
+.timeline-date {
+    margin: 0;
+    color: var(--crimson);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.timeline h3 {
+    margin: 0.4rem 0 0;
+    color: var(--black);
+    font-size: 1.35rem;
+}
+
+.timeline p:last-child {
+    margin: 0.7rem 0 0;
+    color: var(--gray-700);
+}
+
+@media (max-width: 52rem) {
+
+    .about-grid,
+    .timeline-layout,
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
