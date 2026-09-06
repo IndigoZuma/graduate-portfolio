@@ -1,2 +1,2 @@
 # graduate-portfolio
-Sharon Campbell graduateresearch repository 2027
+Sharon Campbell graduate research repository 2027
